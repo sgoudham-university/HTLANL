@@ -15,17 +15,17 @@ public class Responses extends ListenerAdapter {
             voiceLines,
             " Are you with me?",
             " Is this on?",
-            " How Embarrasing!",
+            " How Embarrassing!",
             " Oh Yeah!"
         );
     }
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        Random random = new Random();
+        int random = new Random().nextInt(voiceLines.size());
 
         if (event.getMessage().getContentRaw().toLowerCase().contains("winston")) {
-            event.getChannel().sendMessage(event.getAuthor().getAsMention() + voiceLines.get(random.nextInt(voiceLines.size()))).queue();
+            event.getChannel().sendMessage(event.getAuthor().getAsMention() + voiceLines.get(random)).queue();
         }
     }
 
