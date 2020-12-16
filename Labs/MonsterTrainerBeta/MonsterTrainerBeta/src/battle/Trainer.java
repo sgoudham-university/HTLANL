@@ -107,8 +107,7 @@ public class Trainer {
 		List<String> trainerData = new ArrayList<>();
 
 		// Reading in lines to List of Strings
-		try {
-			Scanner input = new Scanner(new File(filename));
+		try (Scanner input = new Scanner(new File(filename))) {
 			while (input.hasNextLine()) {
 				trainerData.add(input.nextLine());
 			}
