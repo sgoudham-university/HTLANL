@@ -1,0 +1,4 @@
+Ash
+Litten^FIRE^45^65^78
+Rowlet^GRASS^68^55^24
+Pikachu^ELECTRIC^35^55^100
